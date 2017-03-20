@@ -1,0 +1,127 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>You Make Me Abbey</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale: 1.0" />
+    
+	<link rel="stylesheet" type="text/css" href="youmakemeabbey.css"/>
+	
+</head>
+
+<body>
+
+	<div id="topbar"> FireBox by: Davis Web Forge
+		<div class="fireBox">
+			<h1> HELP! THE WEBSITE IS ON FIRE!</h1>
+			<p> PUT OUT THE FIRE AS QUICKLY AS YOU CAN!</p>
+
+			<p class="bold"> Your time: <span id="time">0 </span> seconds </p>
+
+			<div id="box1" > <img src="images/flames.gif" style="width: 50px; height: 50px;">	</div>
+		
+			<script type="text/javascript">
+	 
+				var clickedTime;
+				var createdTime;
+				var reactionTime;
+		 
+				function makeFire(){
+	
+					createdTime = Date.now();
+				
+					var x = Math.random();
+					x = x*1000;
+				
+					setTimeout(function(){
+			
+						var top=Math.random();
+						
+						top=top*450;
+						
+						var left=Math.random();
+						
+						left=left*800;
+						
+						document.getElementById("box1").style.top=top+"px";
+						
+						document.getElementById("box1").style.left=left+"px";
+
+						document.getElementById("box1").style.display="block";
+						
+						createdTime = date.now();
+		
+					}, x);
+	
+				}
+ 
+				document.getElementById("box1").onclick=function()
+				{
+					clickedTime = Date.now();
+					
+					reactionTime=(clickedTime-createdTime)/1000;
+					
+					document.getElementById("time").innerHTML = reactionTime;
+				
+					this.style.display="none";
+					
+					makeFire();
+				}
+	
+				makeFire();
+			</script>
+	
+		</div>
+	
+	</div>
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
